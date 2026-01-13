@@ -8,7 +8,6 @@ class PantryBackground extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        // Gradasi Terang (Light Mode Style)
         Positioned.fill(
           child: Container(
             decoration: const BoxDecoration(
@@ -16,9 +15,9 @@ class PantryBackground extends StatelessWidget {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [
-                  Color(0xFFF5F7FA), // Putih kebiruan segar
-                  Color(0xFFE4E7EB), // Abu-abu sangat muda
-                  Color(0xFFF9F0E6), // Sedikit aksen krem hangat
+                  Color(0xFFF5F7FA),
+                  Color(0xFFE4E7EB),
+                  Color(0xFFF9F0E6),
                 ],
               ),
             ),

@@ -16,7 +16,6 @@ class IngredientSelectionScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        // Teks AppBar diubah jadi hitam agar terbaca di BG terang
         title: const Text('Rahasia Dapur', 
           style: TextStyle(color: Colors.black87, fontWeight: FontWeight.bold)),
         iconTheme: const IconThemeData(color: Colors.black87),
@@ -51,7 +50,6 @@ class IngredientSelectionScreen extends StatelessWidget {
                           onTap: () => provider.toggleIngredient(index),
                           child: Container(
                             decoration: BoxDecoration(
-                              // Warna kartu putih bersih dengan bayangan lembut
                               color: ing.isSelected ? Colors.orangeAccent.withOpacity(0.2) : Colors.white,
                               borderRadius: BorderRadius.circular(15),
                               border: Border.all(color: ing.isSelected ? Colors.orangeAccent : Colors.white),

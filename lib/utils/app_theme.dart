@@ -29,7 +29,6 @@ class AppTheme {
         ),
       ),
 
-      // PERBAIKAN UTAMA: Menggunakan CardThemeData, bukan CardTheme
       cardTheme: CardThemeData(
         color: Colors.white,
         elevation: 2,

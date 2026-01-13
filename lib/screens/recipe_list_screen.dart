@@ -18,7 +18,7 @@ class RecipeListScreen extends StatelessWidget {
         ),
         backgroundColor: Colors.transparent,
         elevation: 0,
-        iconTheme: const IconThemeData(color: Colors.black87), // Icon back jadi gelap
+        iconTheme: const IconThemeData(color: Colors.black87),
       ),
       body: PantryBackground(
         child: Consumer<RecipeProvider>(

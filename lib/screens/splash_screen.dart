@@ -18,13 +18,11 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void _navigateToNext() async {
-    // Menunggu 3 detik agar user bisa melihat logo
     await Future.delayed(const Duration(seconds: 3));
     if (!mounted) return;
     
     final auth = Provider.of<AuthProvider>(context, listen: false);
     
-    // Logic navigasi setelah splash
     if (auth.isLoggedIn) {
       Navigator.pushReplacementNamed(context, '/ingredients');
     } else {
@@ -35,13 +33,11 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // MENGGUNAKAN PANTRYBACKGROUND AGAR WARNA SAMA DENGAN MENU LAIN
       body: PantryBackground(
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // Lingkaran putih halus di belakang icon agar terlihat premium
               Container(
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
@@ -62,7 +58,6 @@ class _SplashScreenState extends State<SplashScreen> {
                 ),
               ),
               const SizedBox(height: 24),
-              // Teks menggunakan warna hitam lembut (black87) sesuai konsistensi menu
               const Text(
                 'Rahasia Dapur',
                 style: TextStyle(
@@ -82,7 +77,6 @@ class _SplashScreenState extends State<SplashScreen> {
                 ),
               ),
               const SizedBox(height: 50),
-              // Loading indicator warna orange agar matching dengan FAB di menu utama
               const CircularProgressIndicator(
                 color: Colors.orangeAccent,
                 strokeWidth: 3,

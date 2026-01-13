@@ -13,7 +13,6 @@ import 'utils/app_theme.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  // Mengunci orientasi layar agar tetap tegak
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   runApp(const MyApp());
 }
@@ -32,7 +31,6 @@ class MyApp extends StatelessWidget {
         title: 'Rahasia Dapur',
         debugShowCheckedModeBanner: false,
         theme: AppTheme.lightTheme,
-        // Halaman awal WAJIB ke SplashScreen
         home: const SplashScreen(),
         onGenerateRoute: (settings) {
           Widget page;

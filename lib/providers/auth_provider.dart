@@ -12,7 +12,6 @@ class AuthProvider with ChangeNotifier {
   }
 
   Future<bool> login(String username, String password) async {
-    // Dummy credentials as per requirement
     if (username == 'admin' && password == 'admin') {
       final prefs = await SharedPreferences.getInstance();
       await prefs.setBool('isLoggedIn', true);

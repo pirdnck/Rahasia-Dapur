@@ -6,7 +6,6 @@ class Ingredient {
   Ingredient({required this.name, required this.image, this.isSelected = false});
 }
 
-// Predefined list of ingredients for selection
 final List<Ingredient> dummyIngredients = [
   Ingredient(name: 'Ayam', image: 'https://img.icons8.com/color/96/chicken.png'),
   Ingredient(name: 'Sapi', image: 'https://img.icons8.com/color/96/cow.png'),

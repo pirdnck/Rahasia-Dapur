@@ -9,7 +9,7 @@ class DatabaseHelper {
 
   Future<Database> get database async {
     if (_database != null) return _database!;
-    _database = await _initDB('recipes_new_v1.db'); // Nama baru untuk reset database
+    _database = await _initDB('recipes_new_v1.db');
     return _database!;
   }
 

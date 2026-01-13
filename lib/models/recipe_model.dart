@@ -15,7 +15,6 @@ class Recipe {
     required this.instructions,
   });
 
-  // Fungsi untuk update data parsial jika diperlukan
   Recipe copyWith({
     int? id,
     String? title,
@@ -32,26 +31,22 @@ class Recipe {
     );
   }
 
-  // Konversi dari database (SQLite)
   factory Recipe.fromMap(Map<String, dynamic> map) {
     return Recipe(
       id: map['id'],
       title: map['title'],
-      // Mengubah int codePoint kembali menjadi IconData
       icon: IconData(map['icon'], fontFamily: 'MaterialIcons'),
-      // Mengubah String database kembali menjadi List
       ingredients: (map['ingredients'] as String).split(','),
       instructions: map['instructions'] ?? '',
     );
   }
 
-  // Konversi ke database
   Map<String, dynamic> toMap() {
     return {
       'id': id,
       'title': title,
-      'icon': icon.codePoint, // Menyimpan int codePoint icon
-      'ingredients': ingredients.join(','), // Menyimpan List sebagai String
+      'icon': icon.codePoint,
+      'ingredients': ingredients.join(','),
       'instructions': instructions,
     };
   }
